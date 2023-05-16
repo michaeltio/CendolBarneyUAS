@@ -2,11 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 //Import Page disini
 import Home from "../pages/Home"
-<<<<<<< Updated upstream
-=======
 import HiWeather from "../pages/HiWeather"
 import Magic8Ball from "../pages/Magic8Ball"
->>>>>>> Stashed changes
 
 
 
@@ -29,14 +26,9 @@ export default function Routing() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />}/>
-<<<<<<< Updated upstream
-          {/* <Route path="/hiweather" element={<HiWeather />}/>
-          <Route path="*" element={<NotFound />}/> */}
-=======
           <Route path="/hiweather" element={<HiWeather />}/>
           <Route path="/magic8ball" element={<Magic8Ball />}/>
           {/* <Route path="*" element={<NotFound />}/> */}
->>>>>>> Stashed changes
         </Routes>
       </Router>
     );

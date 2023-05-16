@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 import { useState, useEffect } from 'react';
 
 
@@ -38,4 +36,3 @@ export default function HiWeather() {
   );
   
 }
->>>>>>> Stashed changes
