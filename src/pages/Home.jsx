@@ -5,7 +5,6 @@ export default function Home(){
     return(
         <div>
             <Logo />
-            <h3 className="bg-blue-500 text-white p-4 rounded-lg">Hello</h3>
             <div className="cards cards flex flex-wrap justify-center">
                 <CardButton
                     route="/hiweather" 
@@ -14,7 +13,7 @@ export default function Home(){
                 <CardButton
                     route="/magic8ball" 
                     img = ""
-                />
+                />  
                 <CardButton
                     route="/"
                     img = "" 

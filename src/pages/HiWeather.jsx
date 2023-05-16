@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Logo from "../components/Logo/Logo";
 
 export default function HiWeather() {
   const [weatherData, setWeatherData] = useState(null);
@@ -19,6 +20,7 @@ export default function HiWeather() {
 
   return (
     <div>
+      <Logo />
       {weatherData ? (
         <div>
           <h2>{weatherData.name}</h2>
