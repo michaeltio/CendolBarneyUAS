@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const NASALibraryImages = () => {
+export default function NASALibraryImages(){
   const [images, setImages] = useState([]);
 
   useEffect(() => {
@@ -39,6 +39,4 @@ const NASALibraryImages = () => {
       </div>
     </div>
   );
-};
-
-export default NASALibraryImages;
+}

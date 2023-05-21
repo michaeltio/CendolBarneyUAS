@@ -5,8 +5,9 @@ import Home from "../pages/Home"
 import HiWeather from "../pages/HiWeather"
 import Magic8Ball from "../pages/Magic8Ball"
 import Quoty from "../pages/Quoty"
-//masih error ini
 import AstronomyLibrary from "../pages/AstronomyLibrary"
+import WouldYouRather from "../pages/WouldYouRather"
+import DogVote from "../pages/DogVote"
 
 
 
@@ -16,7 +17,7 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<AstronomyLibrary />}/>
+        <Route path="/" element={<DogVote />}/>
       </Routes>
     </Router>
   );
