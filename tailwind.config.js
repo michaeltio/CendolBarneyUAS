@@ -10,6 +10,9 @@ export default {
       'md': '1000px',
       'lg': '1400px',
     },
+    fontFamily: {
+      poppins: ['poppins', 'sans-serif'],
+    },
     extend: {},
   },
   plugins: [],
