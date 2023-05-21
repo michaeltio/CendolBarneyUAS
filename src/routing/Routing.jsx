@@ -4,33 +4,36 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from "../pages/Home"
 import HiWeather from "../pages/HiWeather"
 import Magic8Ball from "../pages/Magic8Ball"
+import Quoty from "../pages/Quoty"
+//masih error ini
+import AstronomyLibrary from "../pages/AstronomyLibrary"
 
 
 
 //NOTE
 //Kalo kalian mau liat halaman kalian sendiri bisa ganti aja route path nya jadi gini
-// export default function App() {
-//   return (
-//     <Router>
-//       <Routes>
-//         <Route path="/" element={<NamaHalamanYangDiTest />}/>
-//       </Routes>
-//     </Router>
-//   );
-// }
+export default function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<AstronomyLibrary />}/>
+      </Routes>
+    </Router>
+  );
+}
 // abis itu route yang di bawah di comment aja, jangan dihapus
 
 
-export default function Routing() {
-    return (
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/hiweather" element={<HiWeather />}/>
-          <Route path="/magic8ball" element={<Magic8Ball />}/>
-          {/* <Route path="*" element={<NotFound />}/> */}
-        </Routes>
-      </Router>
-    );
-}
+// export default function Routing() {
+//     return (
+//       <Router>
+//         <Routes>
+//           <Route path="/" element={<Home />}/>
+//           <Route path="/hiweather" element={<HiWeather />}/>
+//           <Route path="/magic8ball" element={<Magic8Ball />}/>
+//           {/* <Route path="*" element={<NotFound />}/> */}
+//         </Routes>
+//       </Router>
+//     );
+// }
   
