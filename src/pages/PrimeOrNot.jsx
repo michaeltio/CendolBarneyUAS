@@ -1,18 +1,20 @@
 import {useEffect, useState } from "react";
 
 function PrimeOrNot(){
+    const [cusStyles, setCusStyles] = useState({ backgroundColor: "ivory" });
     const[rand, setRand] = useState('');
-    const[points, setPoints] = useState('1')
+    const[streak, setStreak] = useState(1)
 
     useEffect(()=>{
         randomize();
     })
 
     function randomize(){
-        var temp = Math.floor(Math.random()*100);
+        var temp = Math.floor(Math.random() * 4000) + 1000;
         setRand(temp);
     }
 
+    
     
     function clickPrime(){
         var correct = true;
@@ -26,7 +28,7 @@ function PrimeOrNot(){
                 }
             }
         }
-        updatePoints(correct);
+        updateStreak(correct);
     }
 
     function clickNotPrime(){
@@ -42,22 +44,29 @@ function PrimeOrNot(){
                 }
             }
         }
-        updatePoints(correct);
+        updateStreak(correct);
     }
 
-    function updatePoints(correct){
+    function updateStreak(correct){
         if(correct){
-            setPoints(prevPoints=>prevPoints*2);
+            setStreak(prevStreak=>prevStreak + 1);
+            setCusStyles({ backgroundColor: "rgba(0, 128, 0, 0.3)" });
         }
         else{
-            if(points>1){
-                setPoints(prevPoints=>prevPoints/2);
-            }
+            setStreak(1)
+            setCusStyles({ backgroundColor: "rgba(255, 0, 0, 0.3)" });
+            randomize();
         }
+        
+
+        setTimeout(() => {
+        setCusStyles({ backgroundColor: "ivory", transition: "background 1s", });
+        }, 10);
     }
 
     return (
-        <div className="">
+        <div className="" >
+            <div style={cusStyles} className="absolute top-0 left-0 w-screen h-screen"/>
             <div className="title absolute top-0 left-1/2 -translate-x-1/2 mt-20">
                 <h1 className="font-bold text-6xl md:text-7xl -translate-x-20 text-green-600">Prime</h1>
                 <h1 className="font-bold text-3xl translate-x-1/2">or</h1>
@@ -67,11 +76,11 @@ function PrimeOrNot(){
                 <h3>{rand}</h3>
             </div>
             <div className="decidingDiv flex justify-center translate-y-64 mt-72">
-                <button onClick={clickPrime} className="border bg-green-500 px-3 rounded-3xl text-white font-bold w-1/4 h-36 lg:text-6xl text-3xl sm:text-4xl md:text-5xl mr-1 md:mr-2">Prime</button>
-                <button onClick={clickNotPrime} className="border bg-red-500 px-3 rounded-3xl text-white font-bold w-1/4 h-36 lg:text-6xl text-3xl sm:text-4xl md:text-5xl ml-1 md:ml-2">Not</button>
+                <button onClick={clickPrime} className="border-none bg-green-500 px-3 rounded-3xl text-white font-bold w-1/4 h-36 lg:text-6xl text-3xl sm:text-4xl md:text-5xl mr-1 md:mr-2">Prime</button>
+                <button onClick={clickNotPrime} className="border-none bg-red-500 px-3 rounded-3xl text-white font-bold w-1/4 h-36 lg:text-6xl text-3xl sm:text-4xl md:text-5xl ml-1 md:ml-2">Not</button>
             </div>
             <div className="pointsDiv absolute bottom-0 left-0 text-white font-bold bg-black p-3 rounded-lg m-3 text-md md:text-2xl">
-                <h3>Points: {points}</h3>
+                <h3>Streak: {streak}</h3>
             </div>
         </div>
     )
