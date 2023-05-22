@@ -17,7 +17,7 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<WouldYouRather />}/>
+        <Route path="/" element={<Quoty />}/>
       </Routes>
     </Router>
   );
