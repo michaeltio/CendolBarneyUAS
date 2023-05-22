@@ -1,5 +1,5 @@
 import Logo from "../components/Logo/Logo"
-import Popup8ball from "../components/Popup8ball/Popup8ball";
+import Popup8ball from "../components/Magic8Ball/Popup8ball/Popup8ball";
 import { useState } from "react";
 import React, { useRef } from 'react';
 

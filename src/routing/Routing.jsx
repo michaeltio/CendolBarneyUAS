@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from "../pages/Home"
 import HiWeather from "../pages/HiWeather"
 import Magic8Ball from "../pages/Magic8Ball"
-
+import PrimeOrNot from '../pages/PrimeOrNot';
 
 
 //NOTE
@@ -28,6 +28,7 @@ export default function Routing() {
           <Route path="/" element={<Home />}/>
           <Route path="/hiweather" element={<HiWeather />}/>
           <Route path="/magic8ball" element={<Magic8Ball />}/>
+          <Route path="/primeornot" element={<PrimeOrNot />}/>
           {/* <Route path="*" element={<NotFound />}/> */}
         </Routes>
       </Router>
