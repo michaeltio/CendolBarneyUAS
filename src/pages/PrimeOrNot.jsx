@@ -1,22 +1,30 @@
-import DecidingButton from "../components/PrimeOrNot/DecidingButton";
-import RandomNumber from "../components/PrimeOrNot/RandomNumber";
-import Points from "../components/PrimeOrNot/Points";
-import { useState } from "react";
+import {useEffect, useState } from "react";
 
 function PrimeOrNot(){
-    const[randNum, setRandNum] = useState('');
+    const[rand, setRand] = useState('');
+    const[points, setPoints] = useState('0')
+
+    useEffect(()=>{
+        randomize();
+    })
+
+    function randomize(){
+        var temp = Math.floor(Math.random()*50);
+        setRand(temp);
+    }
 
     return (
         <div>
             <h1>Prime or Not</h1>
             <div className="numberDiv">
-                <RandomNumber setRandNum={setRandNum} />
+                <h3>{rand}</h3>
             </div>
             <div className="decidingDiv">
-                <DecidingButton randNum={randNum}/> 
+                <button>Prime</button>
+                <button>Not</button>
             </div>
             <div className="pointsDiv">
-                <Points />
+                <h3>Points: {points}</h3>
             </div>
         </div>
     )
