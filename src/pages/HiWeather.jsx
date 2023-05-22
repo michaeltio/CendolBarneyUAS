@@ -68,7 +68,7 @@ export default function HiWeather() {
       )}
       {/* Weather Forecast */}
       {forecastData ? (
-        <div className='flex sm:justify-center text-center overflow-x-auto whitespace-nowrap'>
+        <div className='flex sm:justify-center text-center overflow-x-auto whitespace-nowrap bg-blue-500 w-fit mx-auto'>
           {forecastData.list
             .filter((forecast, index) => index < 7)
             .map((forecast, index) => (

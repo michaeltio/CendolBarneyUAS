@@ -17,7 +17,7 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HiWeather />}/>
+        <Route path="/" element={<WouldYouRather />}/>
       </Routes>
     </Router>
   );
