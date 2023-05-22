@@ -2,28 +2,75 @@ import {useEffect, useState } from "react";
 
 function PrimeOrNot(){
     const[rand, setRand] = useState('');
-    const[points, setPoints] = useState('0')
+    const[points, setPoints] = useState('1')
 
     useEffect(()=>{
         randomize();
     })
 
     function randomize(){
-        var temp = Math.floor(Math.random()*50);
+        var temp = Math.floor(Math.random()*100);
         setRand(temp);
     }
 
+    
+    function clickPrime(){
+        var correct = true;
+        if(rand==1 || rand==0){
+            correct = false
+        }else{
+            for (let i = 2; i < rand; i++) {
+                if (rand % i == 0) {
+                    correct = false;
+                    break;
+                }
+            }
+        }
+        updatePoints(correct);
+    }
+
+    function clickNotPrime(){
+        var correct = false;
+        if(rand==1 || rand==0){
+            correct = true;
+        }
+        else{
+            for (let i = 2; i < rand; i++) {
+                if (rand % i == 0) {
+                    correct = true;
+                    break;
+                }
+            }
+        }
+        updatePoints(correct);
+    }
+
+    function updatePoints(correct){
+        if(correct){
+            setPoints(prevPoints=>prevPoints*2);
+        }
+        else{
+            if(points>1){
+                setPoints(prevPoints=>prevPoints/2);
+            }
+        }
+    }
+
     return (
-        <div>
-            <h1>Prime or Not</h1>
-            <div className="numberDiv">
+        <div className="">
+            <div className="title absolute top-0 left-1/2 -translate-x-1/2 mt-20">
+                <h1 className="font-bold text-6xl md:text-7xl -translate-x-20 text-green-600">Prime</h1>
+                <h1 className="font-bold text-3xl translate-x-1/2">or</h1>
+                <h1 className="font-bold text-6xl md:text-7xl translate-x-28 text-red-600">Not?</h1>
+            </div>
+            <div className="numberDiv absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl font-bold">
                 <h3>{rand}</h3>
             </div>
-            <div className="decidingDiv">
-                <button>Prime</button>
-                <button>Not</button>
+            <div className="decidingDiv flex justify-center translate-y-64 mt-72">
+                <button onClick={clickPrime} className="border bg-green-500 px-3 rounded-3xl text-white font-bold w-1/4 h-36 lg:text-6xl text-3xl sm:text-4xl md:text-5xl mr-1 md:mr-2">Prime</button>
+                <button onClick={clickNotPrime} className="border bg-red-500 px-3 rounded-3xl text-white font-bold w-1/4 h-36 lg:text-6xl text-3xl sm:text-4xl md:text-5xl ml-1 md:ml-2">Not</button>
             </div>
-            <div className="pointsDiv">
+            <div className="pointsDiv absolute bottom-0 left-0 text-white font-bold bg-black p-3 rounded-lg m-3 text-md md:text-2xl">
                 <h3>Points: {points}</h3>
             </div>
         </div>
