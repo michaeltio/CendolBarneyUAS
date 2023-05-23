@@ -13,28 +13,28 @@ import DogVote from "../pages/DogVote"
 
 //NOTE
 //Kalo kalian mau liat halaman kalian sendiri bisa ganti aja route path nya jadi gini
-export default function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<DogVote />}/>
-      </Routes>
-    </Router>
-  );
-}
+// export default function App() {
+//   return (
+//     <Router>
+//       <Routes>
+//         <Route path="/" element={<DogVote />}/>
+//       </Routes>
+//     </Router>
+//   );
+// }
 // abis itu route yang di bawah di comment aja, jangan dihapus
 
 
-// export default function Routing() {
-//     return (
-//       <Router>
-//         <Routes>
-//           <Route path="/" element={<Home />}/>
-//           <Route path="/hiweather" element={<HiWeather />}/>
-//           <Route path="/magic8ball" element={<Magic8Ball />}/>
-//           {/* <Route path="*" element={<NotFound />}/> */}
-//         </Routes>
-//       </Router>
-//     );
-// }
+export default function Routing() {
+    return (
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/hiweather" element={<HiWeather />}/>
+          <Route path="/magic8ball" element={<Magic8Ball />}/>
+          {/* <Route path="*" element={<NotFound />}/> */}
+        </Routes>
+      </Router>
+    );
+}
   

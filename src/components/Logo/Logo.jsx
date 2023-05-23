@@ -1,16 +1,20 @@
 import { useNavigate } from "react-router-dom"
-import './Logo.css'
 
-function Logo(){
+export default function Logo(props){
     const navigate = useNavigate();
+    const {height, width} = props;
+    console.log(props.width);
+
+    const styles = {
+        height : height,
+        width : width
+    }
 
     return (
-        <div className="logoDiv ">
-            <button onClick={()=>navigate('/')}>
-                <img className="logoImg" src="src\assets\images\LogoBarney.png"></img>
+        <div>
+            <button onClick={() => navigate('/')}>
+                <img style={styles} src="src\assets\images\LogoBarney.png"></img>
             </button>
         </div>
     )
-}
-
-export default Logo;
+}   
