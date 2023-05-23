@@ -67,10 +67,15 @@ function PrimeOrNot(){
     return (
         <div className="" >
             <div style={cusStyles} className="absolute top-0 left-0 w-screen h-screen"/>
-            <div className="title absolute top-0 left-1/2 -translate-x-1/2 mt-20">
+            <div className="title absolute top-0 left-1/2 -translate-x-1/2 mt-20 z-30">
                 <h1 className="font-bold text-6xl md:text-7xl -translate-x-20 text-green-600">Prime</h1>
                 <h1 className="font-bold text-3xl translate-x-1/2">or</h1>
                 <h1 className="font-bold text-6xl md:text-7xl translate-x-28 text-red-600">Not?</h1>
+            </div>
+            <div className="title absolute top-1 left-1/2 -translate-x-1/2 mt-20 -ml-1 opacity-25 blur-sm">
+                <h1 className="font-bold text-6xl md:text-7xl -translate-x-20 text-black">Prime</h1>
+                <h1 className="font-bold text-3xl translate-x-1/2">or</h1>
+                <h1 className="font-bold text-6xl md:text-7xl translate-x-28 text-black">Not?</h1>
             </div>
             <div className="numberDiv absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl font-bold">
                 <h3>{rand}</h3>
