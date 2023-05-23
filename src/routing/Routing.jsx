@@ -1,40 +1,38 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import Logo from '../components/Logo/Logo';
 
-//Import Page disini
-import Home from "../pages/Home"
-import HiWeather from "../pages/HiWeather"
-import Magic8Ball from "../pages/Magic8Ball"
-import Quoty from "../pages/Quoty"
-import AstronomyLibrary from "../pages/AstronomyLibrary"
-import WouldYouRather from "../pages/WouldYouRather"
-import DogVote from "../pages/DogVote"
+import UserRoute from "./UserRoute"
 
-
-
-//NOTE
-//Kalo kalian mau liat halaman kalian sendiri bisa ganti aja route path nya jadi gini
-// export default function App() {
-//   return (
-//     <Router>
-//       <Routes>
-//         <Route path="/" element={<DogVote />}/>
-//       </Routes>
-//     </Router>
-//   );
-// }
-// abis itu route yang di bawah di comment aja, jangan dihapus
+function isMobileDevice() {
+  const mediaQuery = window.matchMedia('(max-width: 767px)');
+  return mediaQuery.matches;
+}
 
 
 export default function Routing() {
+  const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+      function handleResize() {
+        setIsMobile(isMobileDevice());
+      }
+  
+      handleResize(); 
+      window.addEventListener('resize', handleResize);
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
+    
     return (
       <Router>
-        <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/hiweather" element={<HiWeather />}/>
-          <Route path="/magic8ball" element={<Magic8Ball />}/>
-          {/* <Route path="*" element={<NotFound />}/> */}
-        </Routes>
-      </Router>
+        {isMobile ? null : location.pathname === ("/") ? null : <Logo width="180px" position="absolute" left="20px"/>}
+      <Routes>
+        <Route path="/*" element={<UserRoute />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+    </Router>
     );
 }
   

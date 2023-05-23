@@ -18,19 +18,19 @@ export default function Home(){
                     img = ""
                 />  
                 <CardButton
-                    route="/"
+                    route="/astronomylibrary"
                     img = "" 
                 />
                 <CardButton
-                    route="/"
+                    route="/primeornot"
                     img = "" 
                 />
                 <CardButton
-                    route="/"
+                    route="/quoty"
                     img = "" 
                 />
                 <CardButton
-                    route="/"
+                    route="/sincebirth"
                     img = "" 
                 />
                 <CardButton
