@@ -35,7 +35,7 @@ export default function AstronomyLibrary(){
   };
 
   return (
-    <div className='text-center items-center'>
+    <div className='text-center items-center bg-gray-900 text-white'>
       <h1 className='text-5xl'>Astronomy Library</h1>
       <input
         type="text"
@@ -46,8 +46,8 @@ export default function AstronomyLibrary(){
       <ul>
         {images.map((image, index) => (
           <li key={index}>
-            <div className='mt-10 border border-black sm:w-1/2 mx-auto'>
-              <h1 className='text-4xl mb-3' >{image.title}</h1>
+            <div className='mt-10 border border-white sm:w-1/2 mx-auto'>
+              <h1 className='text-4xl mb-3 mt-3' >{image.title}</h1>
               <img className='mx-auto mb-3' src={image.href}/>
               <p className='m-3'>{image.description}</p>
             </div>
