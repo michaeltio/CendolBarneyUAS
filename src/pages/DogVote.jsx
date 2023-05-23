@@ -15,11 +15,18 @@ export default function DogImage(){
       });
   };
 
+  const styles = {
+    width : "500px"
+  }
+
   return (
-    <div>
-      <button onClick={fetchDogImage}>Get Dog Image</button>
-      <br />
-      {imageUrl && <img src={imageUrl} alt="Dog Image" />}
+    <div className='text-center'>
+      <h1>Dog Vote</h1>
+      {imageUrl && <img style={styles} className='w-1/2 mx-auto' src={imageUrl} alt="Dog Image" />}
+      <div className='flex justify-center'>
+        <button className='bg-green-500 m-10' onClick={fetchDogImage}>cute dog</button>
+        <button className='bg-red-500 m-10' onClick={fetchDogImage}>nah dog</button>
+      </div>
     </div>
   );
 };

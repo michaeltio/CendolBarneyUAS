@@ -27,8 +27,7 @@ export default function WouldYouRather() {
         <div>
             {data ? (
                 <div>
-                <h1>{data.title}</h1>
-                <p>{data.description}</p>
+                <h1>{data[0].question}</h1>
                 </div>
             ) : (
                 <p>Loading...</p>
