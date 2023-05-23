@@ -7,11 +7,11 @@
    }
    
    .input {
-    width: 100%;
+    width: 250px;
     height: 40px;
     line-height: 28px;
     padding: 0 1rem;
-    padding-left: 2.5rem;
+    padding-left: 2rem;
     border: 2px solid transparent;
     border-radius: 8px;
     outline: none;
