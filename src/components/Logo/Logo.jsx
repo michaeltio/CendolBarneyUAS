@@ -6,8 +6,8 @@ export default function Logo(props){
     console.log(props.width);
 
     const styles = {
-        height : height,
-        width : width
+        width : width || "100%",
+        height : height || "auto"
     }
 
     return (
