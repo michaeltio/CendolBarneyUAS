@@ -5,7 +5,6 @@ import background from "../assets/images/sky.jpg"
 
 export default function HiWeather() {
   const [forecastData, setForecastData] = useState(null);
-  const [inputValue, setInputValue] = useState('');
   const [city, setCity] = useState('Tangerang Selatan');
 
   // OpenWeatherMap API Fetch
@@ -39,12 +38,13 @@ export default function HiWeather() {
     <div style={styles} className='absolute top-0 left-0 h-screen w-screen bg-sky-500 text-white font-poppins'>
       <div className='flex justify-center'>
         <div className="group mb-6">
+        {/* jangan lupa tambahin judul */}
+          <h1>Hi Weather</h1>
           <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
           <input
             type="text"
             id="default-input"
             className="input bg-slate-50 border border-black rounded w-48 mt-4 text-center placeholder-center text-black"
-            onChange={(e) => setInputValue(e.target.value)}
             onKeyPress={handleKeyPress}
             placeholder="Enter City..."
           />

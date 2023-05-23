@@ -17,7 +17,7 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Quoty />}/>
+        <Route path="/" element={<AstronomyLibrary />}/>
       </Routes>
     </Router>
   );

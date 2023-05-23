@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import styles from './CardButton.css'
+import './CardButton.css'
 
 function CardButton(props){
     const navigate = useNavigate();
