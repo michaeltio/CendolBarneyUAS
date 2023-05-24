@@ -1,4 +1,5 @@
 import {useEffect, useState } from "react";
+import Logo from "../components/Logo/Logo";
 
 function PrimeOrNot(){
     const [cusStyles, setCusStyles] = useState({ backgroundColor: "ivory" });
@@ -14,8 +15,6 @@ function PrimeOrNot(){
         setRand(temp);
     }
 
-    
-    
     function clickPrime(){
         var correct = true;
         if(rand==1 || rand==0){
@@ -65,7 +64,7 @@ function PrimeOrNot(){
     }
 
     return (
-        <div className="" >
+        <div>
             <div style={cusStyles} className="absolute top-0 left-0 w-screen h-screen"/>
             <div className="title absolute top-0 left-1/2 -translate-x-1/2 mt-20 z-30">
                 <h1 className="font-bold text-6xl md:text-7xl -translate-x-20 text-green-600">Prime</h1>

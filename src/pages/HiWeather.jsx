@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import "../components/SearchButton/SearchButton.css"
 import axios from 'axios';
 import background from "../assets/images/sky.jpg"
+import Logo from '../components/Logo/Logo';
 
 export default function HiWeather() {
   const [forecastData, setForecastData] = useState(null);
@@ -35,7 +36,7 @@ export default function HiWeather() {
   }
 
   return (
-    <div style={styles} className='absolute top-0 left-0 h-screen w-screen bg-sky-500 text-white font-poppins'>
+    <div style={styles} className='absolute top-0 left-0 h-screen w-screen bg-sky-500 text-white font-poppins z--9'>
       <div>
         <h1 className='text-5xl text-center'>Hi Weather</h1>
         <div className="group mb-6 mx-auto">
