@@ -27,11 +27,13 @@ export default function Routing() {
     
     return (
       <Router>
-        {isMobile ? null : location.pathname === ("/") ? null : <Logo width="180px" position="absolute" left="20px"/>}
-      <Routes>
-        <Route path="/*" element={<UserRoute />} />
-        <Route path="*" element={<Navigate to="/" />} />
-      </Routes>
+        {/* {isMobile ? null : location.pathname === ("/") ? null : <Logo width="180px" position="absolute" left="20px"/>} */}
+        {/* {!isMobile && location.pathname !== "/" && <Logo width="180px" position="fixed" top="20px" left="20px" />} */}
+        <Logo width="180px" position="fixed" top="20px" left="20px"/>
+        <Routes>
+          <Route path="/*" element={<UserRoute />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
     </Router>
     );
 }

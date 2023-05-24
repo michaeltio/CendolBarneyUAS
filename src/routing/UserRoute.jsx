@@ -17,11 +17,11 @@ export default function Routing() {
     return (
         <Routes>    
           <Route path="/" element={<Home />}/>
-          <Route path="/hiweather" element={<HiWeather />}/>
-          <Route path="/magic8ball" element={<Magic8Ball />}/>
           <Route path="/astronomylibrary" element={<AstronomyLibrary />}/>
           <Route path="/credit" element={<Credit />}/>
           <Route path="/primeornot" element={<PrimeOrNot />}/>
+          <Route path="/hiweather" element={<HiWeather />}/>
+          <Route path="/magic8ball" element={<Magic8Ball />}/>
           <Route path="/wouldyourather" element={<WouldYouRather />}/>
           <Route path="/sincebirth" element={<SinceBirth />}/>
           <Route path="/quoty" element={<Quoty />}/>
