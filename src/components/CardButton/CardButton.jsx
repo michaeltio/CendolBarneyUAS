@@ -7,6 +7,7 @@ function CardButton(props){
     return <div className="card m-3">
         <button className="cardButton" onClick={()=>navigate(props.route)}>
             <div className="imageWrapper">
+                <p>{props.name}</p>
                 <img className="buttonImage" src={props.img} />
             </div>
         </button>
