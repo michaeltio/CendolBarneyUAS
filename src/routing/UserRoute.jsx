@@ -7,22 +7,10 @@ import Magic8Ball from "../pages/Magic8Ball"
 import Quoty from "../pages/Quoty"
 import AstronomyLibrary from "../pages/AstronomyLibrary"
 import WouldYouRather from "../pages/WouldYouRather"
-import DogVote from "../pages/DogVote"
-
-
-
-//NOTE
-//Kalo kalian mau liat halaman kalian sendiri bisa ganti aja route path nya jadi gini
-// export default function App() {
-//   return (
-//     <Router>
-//       <Routes>
-//         <Route path="/" element={<DogVote />}/>
-//       </Routes>
-//     </Router>
-//   );
-// }
-// abis itu route yang di bawah di comment aja, jangan dihapus
+import DogsFromAllOverTheWorld from "../pages/DogsFromAllOverTheWorld"
+import PrimeOrNot from "../pages/PrimeOrNot"
+import SinceBirth from "../pages/SinceBirth"
+import Credit from "../pages/Credit"
 
 export default function Routing() {
     
@@ -32,7 +20,12 @@ export default function Routing() {
           <Route path="/hiweather" element={<HiWeather />}/>
           <Route path="/magic8ball" element={<Magic8Ball />}/>
           <Route path="/astronomylibrary" element={<AstronomyLibrary />}/>
+          <Route path="/credit" element={<Credit />}/>
+          <Route path="/primeornot" element={<PrimeOrNot />}/>
+          <Route path="/wouldyourather" element={<WouldYouRather />}/>
+          <Route path="/sincebirth" element={<SinceBirth />}/>
           <Route path="/quoty" element={<Quoty />}/>
+          <Route path="/dogsfromallovertheworld" element={<DogsFromAllOverTheWorld />}/>
         </Routes>
     );
 }
