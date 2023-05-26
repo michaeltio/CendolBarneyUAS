@@ -49,19 +49,14 @@ export default function Home(){
                     name = "8. Dogs From All Over The World"
                 />
                 <CardButton
-                    route="/"
+                    route="/boxed"
                     img = "" 
-                    name = "9. (Belum Ada Game)"
-                />
-                <CardButton
-                    route="/"
-                    img = "" 
-                    name = "10. (Belum Ada Game)"
+                    name = "9. Boxed"
                 />
                 <CardButton
                     route="/Credit"
                     img = "" 
-                    name = "11. Credit"
+                    name = "10. Credit"
                 />
             </div>
         </div>

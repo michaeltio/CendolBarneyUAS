@@ -10,6 +10,7 @@ import WouldYouRather from "../pages/WouldYouRather"
 import DogsFromAllOverTheWorld from "../pages/DogsFromAllOverTheWorld"
 import PrimeOrNot from "../pages/PrimeOrNot"
 import SinceBirth from "../pages/SinceBirth"
+import Boxed from "../pages/Boxed"
 import Credit from "../pages/Credit"
 
 export default function Routing() {
@@ -26,6 +27,7 @@ export default function Routing() {
           <Route path="/sincebirth" element={<SinceBirth />}/>
           <Route path="/quoty" element={<Quoty />}/>
           <Route path="/dogsfromallovertheworld" element={<DogsFromAllOverTheWorld />}/>
+          <Route path="/boxed" element={<Boxed />}/>
         </Routes>
     );
 }
