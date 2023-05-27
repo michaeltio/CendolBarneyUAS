@@ -4,14 +4,9 @@ function Boxed() {
   const [boxSize, setBoxSize] = useState(40); // Initial size of the box
   const [boxRadius, setBoxRadius] = useState(0); // Initial size of the box
   const [boxColor, setBoxColor] = useState('#030b40'); // Initial color of the box
-  const [boxPosition, setBoxPosition] = useState({ top: "50%", left: "50%" }); // Initial position of the box
-  const [boxTranslation, setBoxTranslation] = useState({ translateX: "-50%", translateY: "-50%" }); // Initial position of the box
+  const [boxPosition, setBoxPosition] = useState({ top: 350, left: 230 }); // Initial position of the box
   const [boxVisibility, setBoxVisibility] = useState("visible"); // Initial visibility of the box
-  const [isDragging, setIsDragging] = useState(false); // Indicates whether the box is being dragged
-  const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 }); // Offset between the mouse position and the box position when dragging starts
 
-
-  
   const increaseBoxSize = () => {
     setBoxSize(boxSize + 10); // Increase the box size by 10
   };
@@ -33,67 +28,40 @@ function Boxed() {
     setBoxColor(randomColor);
   };
 
+  const showBox = () => {
+    setBoxVisibility('visible');
+  };
+
+  const hideBox = () => {
+    setBoxVisibility('hidden');
+  };
+
   const moveBox = (direction) => {
-    let { top, left } = boxPosition;
-    const step = 10; // Step size for movement
-
-    switch (direction) {
-      case 'up':
-        top -= step;
-        break;
-      case 'down':
-        top += step;
-        break;
-      case 'left':
-        left -= step;
-        break;
-      case 'right':
-        left += step;
-        break;
-      default:
-        break;
-    }
-
-    setBoxPosition({ top, left });
+    const step = 25; // Step size for movement
+    setBoxPosition((prevPosition) => {
+      let { top, left } = prevPosition;
+  
+      switch (direction) {
+        case 'up':
+          top -= step;
+          break;
+        case 'down':
+          top += step;
+          break;
+        case 'left':
+          left -= step;
+          break;
+        case 'right':
+          left += step;
+          break;
+        default:
+          break;
+      }
+  
+      return { top, left };
+    });
   };
-
-  const handleMouseDown = (event) => {
-    setIsDragging(true);
-    const { clientX, clientY } = event;
-    const { left, top } = event.target.getBoundingClientRect();
-    const offsetX = clientX - left;
-    const offsetY = clientY - top;
-    setDragOffset({ x: offsetX, y: offsetY });
-  };
-
-  function showBox(){
-    setBoxVisibility('visible')
-  }
-
-  function hideBox(){
-    setBoxVisibility('hidden')
-  }
-
-  const handleMouseMove = (event) => {
-    if (isDragging) {
-      const { clientX, clientY } = event;
-      const left = clientX - dragOffset.x;
-      const top = clientY - dragOffset.y;
-      setBoxPosition({ top, left });
-    }
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
-
-  const handleMouseLeave = () => {
-    setIsDragging(false);
-  };
-
-  const handleMouseEnter = () => {
-    setIsDragging(false);
-  };
+  
 
   // Helper function to generate a random color
   const getRandomColor = () => {
@@ -124,7 +92,7 @@ function Boxed() {
         <button onClick={() => moveBox('right')} className='bg-sky-500 border-4 border-sky-600 w-20 rounded-lg text-sky-800 font-bold'>Right</button>
       </div>
       <div
-        className="box absolute  z-0 transition-all"
+        className="box absolute  z-0 transition-all" 
         style={{
           width: boxSize,
           height: boxSize,
@@ -133,15 +101,7 @@ function Boxed() {
           top: boxPosition.top,
           left: boxPosition.left,
           visibility: boxVisibility,
-          translateX: boxTranslation.translateX,
-          translatey: boxTranslation.translateY,
-          cursor: isDragging ? 'grabbing' : 'grab',
         }}
-        onMouseDown={handleMouseDown}
-        onMouseMove={handleMouseMove}
-        onMouseUp={handleMouseUp}
-        onMouseLeave={handleMouseLeave}
-        onMouseEnter={handleMouseEnter}
       ></div>
     </div>
   );
