@@ -10,6 +10,7 @@ import WouldYouRather from "../pages/WouldYouRather"
 import DogsFromAllOverTheWorld from "../pages/DogsFromAllOverTheWorld"
 import PrimeOrNot from "../pages/PrimeOrNot"
 import SinceBirth from "../pages/SinceBirth"
+import Boxed from "../pages/Boxed"
 import Credit from "../pages/Credit"
 
 import Logo from '../components/Logo/Logo';

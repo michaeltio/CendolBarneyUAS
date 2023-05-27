@@ -26,7 +26,10 @@ export default function DogImage() {
   }, [isFirstRender]);
 
   const styles = {
-    width: "500px"
+    maxWidth : "500px",
+    maxHeight : "500px",
+    width: "auto",
+    height : "auto"
   };
 
   return (

@@ -9,6 +9,7 @@ export default function SinceBirth() {
     const [date, setDate] = useState(null)
     const [cusStyles, setCusStyles] = useState({top: "50%", left:"50%"})
     const [cusStyles2, setCusStyles2] = useState({top: "50%", left: "-50%"})
+    const [insStyle, setInsStyle] = useState({opacity: "0%"})
     const [details, setDetails] = useState({
         seconds: 0,
         minutes: 0,
@@ -78,12 +79,15 @@ export default function SinceBirth() {
       function handleClick(){
         setCusStyles({left: "150%", top:"50%", transition: "left 1s ease-in"})
         setCusStyles2({top: "50%", left:"50%", transition: "top 1s ease-out, left 1s ease-out"})
+        setTimeout(function() {
+          setInsStyle({opacity: "60%", transition: "opacity 2s"});
+        }, 4000);
       }
 
     return (
     <div className="wrapper bg-gradient-to-br from-lime-200 to-lime-400 h-screen overflow-hidden">
-        <h1 className="absolute top-0 left-1/2 -translate-x-1/2 font-bold text-6xl z-40 mt-8 text-lime-700">Since</h1>
-        <h1 className="absolute top-0 left-1/2 -translate-x-1/2 font-bold text-6xl z-40 mt-20 text-lime-600">Birth</h1>
+        <h1 className="title absolute top-0 left-1/2 -translate-x-1/2 font-bold text-6xl z-40 mt-8 text-lime-700">Since</h1>
+        <h1 className="title absolute top-0 left-1/2 -translate-x-1/2 font-bold text-6xl z-40 mt-20 text-lime-600">Birth</h1>
         <div className="popupDate absolute -translate-x-1/2 -translate-y-1/2 bg-lime-200 border-none z-40 px-2 pt-3 rounded-xl border-lime-500 w-1/2 md:w-1/3 lg:w-1/4 h-32" style={cusStyles}>
             <h2 className="text-center mb-2">Please enter your birth date.</h2>
             <input type="date" onChange={handleDateChange} className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-6 bg-lime-100 p-2 rounded-lg"></input>
@@ -107,6 +111,10 @@ export default function SinceBirth() {
             <SwiperSlide>Since birth, you have spoken about {details.words} words.</SwiperSlide>
             <SwiperSlide>The average human life expectancy is 72 years. Which means you have about {details.remain} days left.</SwiperSlide>       
         </Swiper>
+        <div style={insStyle} className="absolute left-1/2 -translate-x-1/2 bottom-0 mb-8 text-lime-900">
+          <h3>Slide the cards to the left</h3>
+          <h3 className="font-bold text-2xl text-center">&#8592;</h3>
         </div>
+    </div>
   );
 }

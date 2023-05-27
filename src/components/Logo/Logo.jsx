@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom"
+import Barney from "../../assets/images/LogoBarney.png"
 
 export default function Logo(props){
     const navigate = useNavigate();
@@ -19,7 +20,7 @@ export default function Logo(props){
     return (
         <div style={divStyles} className="w-fit m-0 p-0 top-0 z-10">
             <button onClick={() => navigate('/')}>
-                <img style={imgStyles} src="src\assets\images\LogoBarney.png"></img>
+                <img style={imgStyles} src={Barney}></img>
             </button>
         </div>
     )
