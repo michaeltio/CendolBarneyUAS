@@ -10,6 +10,7 @@ import Magic8BallCard from "../assets/images/Cards/Magic8BallCard.png"
 import SinceBirthCard from "../assets/images/Cards/SinceBirthCard.png"
 import Quoty from "../assets/images/Cards/QuotyCard.png"
 import DogsFromAllOverTheWorldCard from "../assets/images/Cards/DogsFromAllOverTheWorldCard.png"
+import BoxedCard from "../assets/images/Cards/BoxedCard.png";
 import AboutUsCard from "../assets/images/Cards/AboutUsCard.png"
 
 export default function Home(){
@@ -46,6 +47,10 @@ export default function Home(){
                 <CardButton
                     route="/dogsfromallovertheworld"
                     img = {DogsFromAllOverTheWorldCard}
+                />
+                <CardButton
+                    route="/boxed"
+                    img = {BoxedCard}
                 />
                 <CardButton
                     route="/aboutus"

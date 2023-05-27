@@ -49,6 +49,7 @@ export default function Routing() {
           <Route path="/sincebirth" element={<SinceBirth />}/>
           <Route path="/quoty" element={<Quoty />}/>
           <Route path="/dogsfromallovertheworld" element={<DogsFromAllOverTheWorld />}/>
+          <Route path="/boxed" element={<Boxed />}/>
           <Route path="/aboutus" element={<Credit />}/>
         </Routes>
         </>
