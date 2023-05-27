@@ -36,7 +36,7 @@ export default function HiWeather() {
   }
 
   return (
-    <div style={styles} className='absolute top-0 left-0 h-screen w-screen bg-sky-500 text-white font-poppins z--9'>
+    <div style={styles} className='absolute top-0 left-0 h-screen w-screen bg-sky-500 text-white font-poppins'>
       <div>
         <h1 className='text-5xl text-center'>Hi Weather</h1>
         <div className="group mb-6 mx-auto">

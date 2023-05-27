@@ -31,12 +31,18 @@ export default function DogImage() {
 
   return (
     <div className='text-center relative'>
-      <h1 className='text-5xl'>Dog Vote</h1>
+      <h1 className='text-5xl mt-10 mb-20'>Dogs From All Over The World</h1>
       {imageUrl ? (
-        <img style={styles} className='w-1/2 mx-auto' src={imageUrl} alt="Dog Image" />): (<h1>Loading Dog Image</h1>)}
-      <div className='flex justify-center absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-3/4'>
-        <button className='bg-green-500 m-10 p-5' onClick={fetchDogImage}>cute dog</button>
-        <button className='bg-red-500 m-10 p-5' onClick={fetchDogImage}>nah dog</button>
+        <div className="dog-card flex items-center h-96 mx-auto">
+          <img style={{ ...styles, objectFit: 'contain' }} className='h-full mx-auto' src={imageUrl} alt="Dog Image" />
+        </div>
+      
+        ) : (<h1>Loading Dog Image</h1>)}
+      <div className='flex justify-center absolute w-full'>
+        <div className='flex justify-between mt-20'>
+          <button className='bg-green-500 mr-10 p-5' onClick={fetchDogImage}>cute dog</button>
+          <button className='bg-red-500 ml-10 p-5' onClick={fetchDogImage}>nah dog</button>
+        </div>
       </div>
     </div>
   );
