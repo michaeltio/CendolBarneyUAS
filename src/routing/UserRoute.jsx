@@ -38,18 +38,17 @@ export default function Routing() {
   }, []);
     return (
       <>
-        {isMobile ? null : isOnHome ? null : <Logo width="180px" position="fixed" left="20px" top="20px" />}
+        {isOnHome ? null : isMobile ? <Logo width="110px" position="fixed" left="5px" top="5px"/> : <Logo width="180px" position="fixed" left="20px" top="20px" />} 
         <Routes>    
           <Route path="/" element={<Home />}/>
-          <Route path="/astronomylibrary" element={<AstronomyLibrary />}/>
-          <Route path="/credit" element={<Credit />}/>
-          <Route path="/primeornot" element={<PrimeOrNot />}/>
           <Route path="/hiweather" element={<HiWeather />}/>
+          <Route path="/primeornot" element={<PrimeOrNot />}/>
+          <Route path="/astronomylibrary" element={<AstronomyLibrary />}/>
           <Route path="/magic8ball" element={<Magic8Ball />}/>
-          <Route path="/wouldyourather" element={<WouldYouRather />}/>
           <Route path="/sincebirth" element={<SinceBirth />}/>
           <Route path="/quoty" element={<Quoty />}/>
           <Route path="/dogsfromallovertheworld" element={<DogsFromAllOverTheWorld />}/>
+          <Route path="/aboutus" element={<Credit />}/>
         </Routes>
         </>
     );

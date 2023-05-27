@@ -1,6 +1,16 @@
+//Component
 import CardButton from "../components/CardButton/CardButton";
 import Logo from "../components/Logo/Logo";
-import Card from "../assets/images/Cards/HiWeatherCard.png"
+
+//Card Images
+import HiWeatherCard from "../assets/images/Cards/HiWeatherCard.png"
+import PrimeOrNotCard from "../assets/images/Cards/PrimeOrNotCard.png"
+import AstronomyLibraryCard from "../assets/images/Cards/AstronomyLibraryCard.png"
+import Magic8BallCard from "../assets/images/Cards/Magic8BallCard.png"
+import SinceBirthCard from "../assets/images/Cards/SinceBirthCard.png"
+import Quoty from "../assets/images/Cards/QuotyCard.png"
+import DogsFromAllOverTheWorldCard from "../assets/images/Cards/DogsFromAllOverTheWorldCard.png"
+import AboutUsCard from "../assets/images/Cards/AboutUsCard.png"
 
 export default function Home(){
     return(
@@ -11,57 +21,35 @@ export default function Home(){
             <div className="cards cards flex flex-wrap justify-center">
                 <CardButton
                     route="/hiweather" 
-                    img = {Card}
+                    img = {HiWeatherCard}
                 />
                 <CardButton
                     route="/primeornot"
-                    img = "" 
-                    name = "2. Prime Or Not"
+                    img = {PrimeOrNotCard} 
                 />
                 <CardButton
                     route="/astronomylibrary"
-                    img = "" 
-                    name = "3. Astronomy Library"
+                    img = {AstronomyLibraryCard}
                 />
                 <CardButton
                     route="/magic8ball" 
-                    img = ""
-                    name = "4. magic 8 ball"
+                    img = {Magic8BallCard}
                 />  
                 <CardButton
                    route="/sincebirth"
-                   img = "" 
-                    name = "5. Since Birth" 
+                   img = {SinceBirthCard} 
                 />
                 <CardButton
                     route="/quoty"
-                    img = "" 
-                    name = "6. Quoty"
-                />
-                <CardButton
-                    route="/wouldyourather"
-                    img = ""
-                    name = "7. Would You Rather" 
+                    img = {Quoty}
                 />
                 <CardButton
                     route="/dogsfromallovertheworld"
-                    img = "" 
-                    name = "8. Dogs From All Over The World"
+                    img = {DogsFromAllOverTheWorldCard}
                 />
                 <CardButton
-                    route="/"
-                    img = "" 
-                    name = "9. (Belum Ada Game)"
-                />
-                <CardButton
-                    route="/"
-                    img = "" 
-                    name = "10. (Belum Ada Game)"
-                />
-                <CardButton
-                    route="/Credit"
-                    img = "" 
-                    name = "11. Credit"
+                    route="/aboutus"
+                    img = {AboutUsCard}
                 />
             </div>
         </div>
