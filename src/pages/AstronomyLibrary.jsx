@@ -37,7 +37,6 @@ export default function AstronomyLibrary() {
   const handleKeyPress = (event) => {
     if (event.key === 'Enter') {
       event.preventDefault();
-      console.log(event.target.value);
       setSearch(event.target.value);
     }
   };
