@@ -42,8 +42,9 @@ export default function DogImage() {
         </div>
         {imageUrl ? (
           <div className="dog-card flex items-center h-96 mx-auto">
-            <img style={{ ...styles, objectFit: 'contain' }} className='h-full mx-auto p-5 rounded-3xl hover:scale-105 transition' src={imageUrl} alt="Dog Image" />
+            <img style={{ ...styles, objectFit: 'contain', width: '100%' }} className='h-full mx-auto p-5 rounded-3xl hover:scale-105 transition' src={imageUrl} alt="Dog Image" />
           </div>
+        
         
         ) : (<h1>Loading Dog Image</h1>)}
         <div className='flex justify-center absolute w-full'>
