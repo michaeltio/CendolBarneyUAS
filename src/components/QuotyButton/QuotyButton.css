@@ -30,6 +30,7 @@
     width: 10px;
     z-index: -1;
   }
+  
 @media (min-width: 720px) {
   .button:hover {
     box-shadow: 1px 1px 200px #252525;

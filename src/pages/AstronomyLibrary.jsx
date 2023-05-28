@@ -43,9 +43,9 @@ export default function AstronomyLibrary() {
 
   return (
     <div className='text-center items-center bg-gray-900 text-white pt-5'>
-      <div className='title ml-14 mb-4'>
+      <div className='title ml-14 mb-4 mt-12'>
         <h1 className='text-5xl font-bold mr-10'>Astronomy</h1> 
-        <h1 className='absolute top-0 left-1/2 -translate-x-1/2 mt-16 -ml-16 text-5xl'>&#9733;</h1> 
+        <h1 className='absolute top-0 left-1/2 -translate-x-1/2 mt-28 -ml-16 text-5xl'>&#9733;</h1> 
         <h1 className='text-5xl font-bold -mt-1 ml-12'>Library</h1> 
       </div>
       <div className="group mb-6 mx-auto">
@@ -56,15 +56,16 @@ export default function AstronomyLibrary() {
           className="input bg-slate-50 border border-black rounded mt-4 text-center placeholder-center text-black"
           onKeyPress={handleKeyPress}
           placeholder="Search For (ex. Jupiter)"
+          autoComplete='off'
         />
       </div>
       <ul>
         {images.map((image, index) => (
-          <li key={index}>
-            <div className='mt-10 border border-white sm:w-1/2 mx-auto'>
-              <h1 className='text-4xl mb-3 mt-3' >{image.title}</h1>
+          <li key={index} className='px-5'>
+            <div className='mt-10 border border-white sm:w-1/2 mx-auto bg-gradient-to-bl from-gray-600 to-gray-900 transition hover:scale-105'>
+              <h1 className='text-4xl mb-3 mt-3 font-bold p-4' >{image.title}</h1>
               <img className='mx-auto mb-3' src={image.href} />
-              <p className='m-3'>{image.description}</p>
+              <p className='m-3 p-4'>{image.description}</p>
             </div>
           </li>
         ))}
