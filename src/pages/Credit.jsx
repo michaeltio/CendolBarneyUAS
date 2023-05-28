@@ -50,7 +50,7 @@ export default function Credit(){
                                 <div className="mt-2 bg-gradient-to-t from-amber-300 viaf-amber-500 to-amber-200 rounded-xl p-2 border-4 border-amber-300 transition hover:scale-110">
                                     <h1 className="font-bold text-amber-900 text-xl">Michael Tio</h1>
                                     <h1>00000070515</h1>
-                                    <h1 className="underline"><a href="https://www.instagram.com/michael.tioo">@michael.tioo</a></h1>
+                                    <h1 className="underline"><a href="https://www.instagram.com/michael.tioo" target="_blank">@michael.tioo</a></h1>
                                 </div>
                             </div>
                             <div className="mt-10 drop-shadow-md" onMouseEnter={handleRussel} onMouseLeave={handleRussel}>
@@ -58,7 +58,7 @@ export default function Credit(){
                                 <div className="mt-2 bg-gradient-to-t from-amber-300 viaf-amber-500 to-amber-200 rounded-xl p-2 border-4 border-amber-300 transition hover:scale-110">
                                     <h1 className="font-bold text-amber-900 text-xl">Russel Shivah Budiarto</h1>
                                     <h1>00000070376</h1>
-                                    <h1 className="underline"><a href="https://www.instagram.com/sshivahh">@sshivahh</a></h1>
+                                    <h1 className="underline"><a href="https://www.instagram.com/sshivahh" target="_blank">@sshivahh</a></h1>
                                 </div>                            
                             </div>
                             <div className="mt-10 drop-shadow-md" onMouseEnter={handleJap} onMouseLeave={handleJap}>
@@ -66,7 +66,7 @@ export default function Credit(){
                                 <div className="mt-2 bg-gradient-to-t from-amber-300 viaf-amber-500 to-amber-200 rounded-xl p-2 border-4 border-amber-300 transition hover:scale-110">
                                     <h1 className="font-bold text-amber-900 text-xl">Jonathan Adi Purwoko</h1>
                                     <h1>00000071230</h1>
-                                    <h1 className="underline"><a href="https://www.instagram.com/jonathan.jap">@jonathan.jap</a></h1>
+                                    <h1 className="underline"><a href="https://www.instagram.com/jonathan.jap" target="_blank">@jonathan.jap</a></h1>
                                 </div> 
                             </div>
                             <div className="mt-10 drop-shadow-md" onMouseEnter={handleFelix} onMouseLeave={handleFelix}>
@@ -74,7 +74,7 @@ export default function Credit(){
                                 <div className="mt-2 bg-gradient-to-t from-amber-300 viaf-amber-500 to-amber-200 rounded-xl p-2 border-4 border-amber-300 transition hover:scale-110">
                                     <h1 className="font-bold text-amber-900 text-xl">Felix Mario Walewangko</h1>
                                     <h1>00000070498</h1>
-                                    <h1 className="underline"><a href="https://instagram.com/fel.mw">@fel.mw</a></h1>
+                                    <h1 className="underline"><a href="https://instagram.com/fel.mw" target="_blank">@fel.mw</a></h1>
                                 </div> 
                             </div>
                         </div>
