@@ -62,7 +62,7 @@ export default function AstronomyLibrary() {
       <ul>
         {images.map((image, index) => (
           <li key={index} className='px-5'>
-            <div className='mt-10 border border-white sm:w-1/2 mx-auto bg-gradient-to-bl from-gray-600 to-gray-900 transition hover:scale-105'>
+            <div className='mt-10 border border-white sm:w-1/2 mx-auto bg-gradient-to-bl from-gray-600 to-gray-900 transition hover:scale-105 rounded-3xl'>
               <h1 className='text-4xl mb-3 mt-3 font-bold p-4' >{image.title}</h1>
               <img className='mx-auto mb-3' src={image.href} />
               <p className='m-3 p-4'>{image.description}</p>
