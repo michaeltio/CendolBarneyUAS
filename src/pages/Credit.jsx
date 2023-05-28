@@ -1,13 +1,13 @@
 import { useState } from "react"
-import QR from "../assets/images/qr.jpg"
-import TioFormal from "../assets/images/selfi/tioformal.jpg"
-import RusselFormal from "../assets/images/selfi/russelformal.jpg"
-import JapFormal from "../assets/images/selfi/japformal.jpg"
-import FelixFormal from "../assets/images/selfi/felixformal.jpg"
-import Tio from "../assets/images/selfi/tio.jpg"
-import Russel from "../assets/images/selfi/russel.jpg"
-import Jap from "../assets/images/selfi/jap.jpg"
-import Felix from "../assets/images/selfi/felix.jpg"
+import QR from "../assets/images/qr.webp"
+import TioFormal from "../assets/images/selfi/tioformal.webp"
+import RusselFormal from "../assets/images/selfi/russelformal.webp"
+import JapFormal from "../assets/images/selfi/japformal.webp"
+import FelixFormal from "../assets/images/selfi/felixformal.webp"
+import Tio from "../assets/images/selfi/tio.webp"
+import Russel from "../assets/images/selfi/russel.webp"
+import Jap from "../assets/images/selfi/jap.webp"
+import Felix from "../assets/images/selfi/felix.webp"
 
 
 export default function Credit(){

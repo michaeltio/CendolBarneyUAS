@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import Barney from "../../assets/images/LogoBarney.png"
+import Barney from "../../assets/images/LogoBarney.webp"
 
 export default function Logo(props){
     const navigate = useNavigate();
