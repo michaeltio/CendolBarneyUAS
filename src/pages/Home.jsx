@@ -3,15 +3,15 @@ import CardButton from "../components/CardButton/CardButton";
 import Logo from "../components/Logo/Logo";
 
 //Card Images
-import HiWeatherCard from "../assets/images/Cards/HiWeatherCard.png"
-import PrimeOrNotCard from "../assets/images/Cards/PrimeOrNotCard.png"
-import AstronomyLibraryCard from "../assets/images/Cards/AstronomyLibraryCard.png"
-import Magic8BallCard from "../assets/images/Cards/Magic8BallCard.png"
-import SinceBirthCard from "../assets/images/Cards/SinceBirthCard.png"
-import Quoty from "../assets/images/Cards/QuotyCard.png"
-import DogsFromAllOverTheWorldCard from "../assets/images/Cards/DogsFromAllOverTheWorldCard.png"
-import BoxedCard from "../assets/images/Cards/BoxedCard.png";
-import AboutUsCard from "../assets/images/Cards/AboutUsCard.png"
+import HiWeatherCard from "../assets/images/Cards/HiWeatherCard.webp"
+import PrimeOrNotCard from "../assets/images/Cards/PrimeOrNotCard.webp"
+import AstronomyLibraryCard from "../assets/images/Cards/AstronomyLibraryCard.webp"
+import Magic8BallCard from "../assets/images/Cards/Magic8BallCard.webp"
+import SinceBirthCard from "../assets/images/Cards/SinceBirthCard.webp"
+import Quoty from "../assets/images/Cards/QuotyCard.webp"
+import DogsFromAllOverTheWorldCard from "../assets/images/Cards/DogsFromAllOverTheWorldCard.webp"
+import BoxedCard from "../assets/images/Cards/BoxedCard.webp";
+import AboutUsCard from "../assets/images/Cards/AboutUsCard.webp"
 
 export default function Home(){
     return(
