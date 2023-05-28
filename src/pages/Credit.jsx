@@ -1,3 +1,5 @@
+import QR from "../assets/images/qr.jpg"
+
 export default function Credit(){
     return(
         <div>
@@ -28,9 +30,9 @@ export default function Credit(){
                 </div>
             </div>
             <div className="text-center">
-                <h1>Rate US!!!</h1>
-                <img src="" alt="" />
-                <h1>Link</h1>
+                <h1>Rate This Website</h1>
+                <img className="mx-auto" src={QR} alt="" />
+                <h1><a href="https://me-qr.com/8YONNg6x" target="_blank">Link</a></h1>
             </div>
         </div>
     );

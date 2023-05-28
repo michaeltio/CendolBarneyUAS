@@ -9,7 +9,7 @@ function CardButton(props){
             <button className="cardButton" onClick={()=>navigate(props.route)}>
                 <div className="imageWrapper">
                     <p>{props.name}</p>
-                    <img src={props.img} />
+                    <img draggable="false" src={props.img} />
                 </div>
             </button>
         </div>

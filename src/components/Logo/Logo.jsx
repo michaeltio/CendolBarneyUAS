@@ -20,7 +20,7 @@ export default function Logo(props){
     return (
         <div style={divStyles} className="w-fit m-0 p-0 top-0 z-10">
             <button onClick={() => navigate('/')}>
-                <img style={imgStyles} src={Barney}></img>
+                <img draggable="false" style={imgStyles} src={Barney}></img>
             </button>
         </div>
     )
