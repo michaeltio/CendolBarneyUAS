@@ -9,12 +9,9 @@
 }
 
 .cardButton{
-    width: 450px;
-    height: 253px;
     overflow: hidden;
     background-color: grey;
 }
 
-.buttonImage{
-    object-fit: contain;
-}
+
+
