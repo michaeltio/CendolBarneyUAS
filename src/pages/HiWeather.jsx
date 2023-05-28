@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "../components/SearchButton/SearchButton.css"
 import axios from 'axios';
-import background from "../assets/images/sky.jpg"
-import Logo from '../components/Logo/Logo';
+import background from "../assets/images/sky.webp"
 
 export default function HiWeather() {
   const [forecastData, setForecastData] = useState(null);
